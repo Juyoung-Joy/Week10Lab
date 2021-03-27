@@ -28,7 +28,7 @@ public class AdminFilter implements Filter {
         String email = (String)session.getAttribute("email");
         String admin = "cprg352+admin@gmail.com";
         
-        if (email == null ? admin != null : !email.equals(admin)){
+        if (!email.equals(admin)){
             
             HttpServletResponse httpResponse = (HttpServletResponse) response;
             httpResponse.sendRedirect("notes");
